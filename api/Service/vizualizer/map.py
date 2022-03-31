@@ -28,6 +28,7 @@ def regions():
     feature_collection = FeatureCollection(features)
     return jsonify(feature_collection), 200
 
+
 @app.route("/api/map/region/<region_id>", methods=["GET"], strict_slashes=False)
 def region(region_id):
     features = []
@@ -49,6 +50,7 @@ def region(region_id):
     feature_collection = FeatureCollection(features)
     return jsonify(feature_collection), 200
 
+
 @app.route("/api/map/departement/<departement_id>", methods=["GET"], strict_slashes=False)
 def departement(departement_id):
     features = []
@@ -69,6 +71,7 @@ def departement(departement_id):
                                 id=arron['id']))
     feature_collection = FeatureCollection(features)
     return jsonify(feature_collection), 200
+
 
 @app.route("/api/map/arrondissement/<arrondissement_id>", methods=["GET"], strict_slashes=False)
 def arrondissement(arrondissement_id):
